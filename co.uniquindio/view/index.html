@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Analisis de Algoritmos</title>
     <style>
         body {
@@ -14,14 +15,26 @@
 </head>
 
 <body style="background-color: #5958FB;">
-    <script src="../p5.js"></script>
-    <script src="visualizar.js"></script>
 
-
-    <button style="background-color: #A8E2F2;margin-top: 10px;width: 100px;margin-left: 10px; border-color: #733F7F ;" onclick="moverIzquierda();">Izquierda</button>
-    <button style="background-color: #A8E2F2;margin-top: 10px;width: 100px; border-color: #733F7F " onclick="moverDerecha();">Derecha</button>
-    <button style="background-color: #A8E2F2;margin-top: 10px;width: 100px; border-color: #733F7F " onclick="moverArriba();">Arriba</button>
-    <button style="background-color: #A8E2F2;margin-top: 10px;width: 100px; border-color: #733F7F " onclick="moverAbajo();">Abajo</button>
+    <div id="general">
+        <div id="botones">
+            <button style="background-color: #A8E2F2;margin-top: 10px;width: 100px;margin-left: 10px; border-color: #733F7F ; " onclick="izquierda(); ">Izquierda</button>
+            <button style="background-color: #A8E2F2;margin-top: 10px;width: 100px; border-color: #733F7F " onclick="derecha(); ">Derecha</button>
+            <button style="background-color: #A8E2F2;margin-top: 10px;width: 100px; border-color: #733F7F " onclick="arriba(); ">Arriba</button>
+            <button style="background-color: #A8E2F2;margin-top: 10px;width: 100px; border-color: #733F7F " onclick="abajo(); ">Abajo</button>
+        </div>
+        <div>
+            <button style="background-color: #A8E2F2;width: 100px; border-color: #733F7F; margin-left: 500px;" onclick="ejecutar();">Ejecutar</button>
+        </div>
+        <div id="juego">
+            <script src="../p5.js "></script>
+            <script src="visualizar.js"></script>
+        </div>
+        <div id="listaMov">
+            <h4> Lista de movimientos</h5>
+                <p id="listaMovimiento"></p>
+        </div>
+    </div>
 </body>
 
 </html>
