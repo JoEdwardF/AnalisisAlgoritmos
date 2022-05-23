@@ -18,21 +18,57 @@
 
     <div id="general">
         <div id="botones">
+            <h1 id="mundo" style="margin-top: 10px; margin-left: 10px">Nivel</h1>
+
             <button style="background-color: #A8E2F2;margin-top: 10px;width: 100px;margin-left: 10px; border-color: #733F7F ; " onclick="izquierda(); ">Izquierda</button>
             <button style="background-color: #A8E2F2;margin-top: 10px;width: 100px; border-color: #733F7F " onclick="derecha(); ">Derecha</button>
             <button style="background-color: #A8E2F2;margin-top: 10px;width: 100px; border-color: #733F7F " onclick="arriba(); ">Arriba</button>
             <button style="background-color: #A8E2F2;margin-top: 10px;width: 100px; border-color: #733F7F " onclick="abajo(); ">Abajo</button>
         </div>
         <div>
-            <button style="background-color: #A8E2F2;width: 100px; border-color: #733F7F; margin-left: 500px;" onclick="ejecutar();">Ejecutar</button>
+            <button style="background-color: #A8E2F2;width: 100px; border-color: #733F7F; margin-left: 500px;" onclick="ejecuting();">Ejecutar</button>
         </div>
-        <div id="juego">
+        <div>
             <script src="../p5.js "></script>
             <script src="visualizar.js"></script>
         </div>
         <div id="listaMov">
             <h4> Lista de movimientos</h5>
                 <p id="listaMovimiento"></p>
+        </div>
+        <div id="siguienteMundo">
+            <button style="background-color: #A8E2F2;width: 100px; border-color: #733F7F; margin-left: 10px;" onclick="dibujarSiguienteNivel();">Siguiente Mundo</button>
+        </div>
+        <div id="encuesta">
+            <div id="preguntas">
+                <br/>
+                <div class="pregunta">
+                    ¿Cúal es tú nombre?
+                    <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="20">
+                </div>
+                <br/>
+
+                <div class="pregunta">
+                    1. ¿Te parecieron dificiles los niveles?<br />
+                </div>
+                <div class="respuestas">
+                    <input type="radio" name="preg1" value="1" /> Sí<br />
+                    <input type="radio" name="preg1" value="2" /> No<br />
+                    <input type="radio" name="preg1" value="3" /> Ns/Nc<br />
+                </div>
+                <div class="pregunta">
+                    <br/>2. ¿Cúal te pareció más complicado?<br />
+                </div>
+                <div class="respuestas">
+                    <input type="radio" name="preg2" value="1" /> Nivel 1<br />
+                    <input type="radio" name="preg2" value="2" /> Nivel 2<br />
+                    <input type="radio" name="preg2" value="3" /> Nivel 3<br />
+                    <input type="radio" name="preg2" value="4" /> Nivel 4<br />
+                    <input type="radio" name="preg2" value="5" /> Nivel 5<br />
+                </div>
+                <button style="background-color: #A8E2F2;width: 100px; border-color: #733F7F; margin-top: 10px;" onclick="">Enviar respuestas</button>
+
+            </div>
         </div>
     </div>
 </body>
