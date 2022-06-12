@@ -364,7 +364,7 @@ function reset() {
 let img;
 
 function preload() {
-    img = loadImage('assets/cesped.jpg');
+    img = loadImage('assets/pared.jpg');
 }
 
 function setup() {
@@ -393,8 +393,9 @@ function setup() {
                         fill(184, 200, 0);
                         rect((42 * i) + 10, (42 * j) + 10, 40, 40);
                     } else {
-                        fill(86, 0, 0);
-                        rect((42 * i) + 10, (42 * j) + 10, 40, 40);
+                        image(img, (42 * i) + 10, (42 * j) + 10, 40, 40);
+                        //fill(86, 0, 0);
+                        //rect((42 * i) + 10, (42 * j) + 10, 40, 40);
                     }
                 }
             }
