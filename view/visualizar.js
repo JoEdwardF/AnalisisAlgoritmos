@@ -369,7 +369,7 @@ let cesped;
 let coin;
 
 function preload() {
-    cesped = loadImage('assets/cesped.jpg');
+    cesped = loadImage('assets/cesped.png');
     pared = loadImage('assets/pared.png');
     coin = loadImage('assets/coin.jpg');
 }
