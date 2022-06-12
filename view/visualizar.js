@@ -372,7 +372,6 @@ function setup() {
     createCanvas(500, 450);
     //background(200);
 
-
     // Definir colores
     fill(204, 101, 192, 127);
     stroke(127, 63, 120);
@@ -401,6 +400,5 @@ function setup() {
             }
         }
     }
-    image(img, 20, 40, 100, 100);
 
 }
