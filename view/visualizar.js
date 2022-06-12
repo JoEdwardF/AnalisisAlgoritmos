@@ -364,7 +364,7 @@ function reset() {
 let img;
 
 function preload() {
-    img = loadImage('assets/pared.jpg');
+    img = loadImage('assets/pared.png');
 }
 
 function setup() {
