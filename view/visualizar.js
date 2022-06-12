@@ -380,7 +380,7 @@ function setup() {
     for (let i = 0; i < matriz1.length; i++) {
         for (let j = 0; j < matriz1[0].length; j++) {
             if (matriz1[j][i] == 0) {
-                image(cesped, (42 * i) + 10, (42 * i) + 10, 40, 40)
+                image(cesped, (42 * i) + 10, (42 * j) + 10, 40, 40)
                     //fill(81, 187, 234);
                     //rect((42 * i) + 10, (42 * i) + 10, 40, 40);
             } else {
