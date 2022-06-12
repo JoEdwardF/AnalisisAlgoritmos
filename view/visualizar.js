@@ -1,5 +1,4 @@
 var nivel = 0;
-let cesped;
 let x, y;
 
 var matriz1 = [
@@ -361,17 +360,19 @@ function reset() {
     }
 }
 
-let img;
+let pared;
+let cesped;
 
 function preload() {
-    img = loadImage('assets/pared.jpg');
+    pared = loadImage('assets/pared.jpg');
+    cesped = loadImage('assets/cesped.png');
 }
 
 function setup() {
     // crear el lienzo
     createCanvas(500, 450);
     //background(200);
-
+    background();
     // Definir colores
     fill(204, 101, 192, 127);
     stroke(127, 63, 120);
@@ -379,8 +380,9 @@ function setup() {
     for (let i = 0; i < matriz1.length; i++) {
         for (let j = 0; j < matriz1[0].length; j++) {
             if (matriz1[j][i] == 0) {
-                fill(81, 187, 234);
-                rect((42 * i) + 10, (42 * j) + 10, 40, 40);
+                image(cesped, (42 * i) + 10, (42 * i) + 10, 40, 40)
+                    //fill(81, 187, 234);
+                    //rect((42 * i) + 10, (42 * i) + 10, 40, 40);
             } else {
                 if (matriz1[j][i] == 1) {
                     fill(81, 187, 234);
@@ -392,7 +394,7 @@ function setup() {
                         fill(184, 200, 0);
                         rect((42 * i) + 10, (42 * j) + 10, 40, 40);
                     } else {
-                        image(img, (42 * i) + 10, (42 * j) + 10, 40, 40);
+                        image(pared, (42 * i) + 10, (42 * j) + 10, 40, 40);
                         //fill(86, 0, 0);
                         //rect((42 * i) + 10, (42 * j) + 10, 40, 40);
                     }
