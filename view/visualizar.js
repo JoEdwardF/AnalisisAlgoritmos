@@ -338,21 +338,25 @@ function reset() {
     for (let i = 0; i < matrizAUsar.length; i++) {
         for (let j = 0; j < matrizAUsar[0].length; j++) {
             if (matrizAUsar[i][j] == 0) {
-                fill(81, 187, 234);
-                rect((42 * i) + 10, (42 * j) + 10, 40, 40);
+                image(cesped, (42 * i) + 10, (42 * j) + 10, 40, 40);
+                //fill(81, 187, 234);
+                //rect((42 * i) + 10, (42 * j) + 10, 40, 40);
             } else {
                 if (matrizAUsar[i][j] == 1) {
-                    fill(81, 187, 234);
-                    rect((42 * i) + 10, (42 * j) + 10, 40, 40);
+                    image(cesped, (42 * i) + 10, (42 * j) + 10, 40, 40);
+                    //fill(81, 187, 234);
+                    //rect((42 * i) + 10, (42 * j) + 10, 40, 40);
                     fill(247, 80, 80);
                     triangle((42 * i) + 10, (42 * j) + 50, (42 * i) + 30, (42 * j) + 10, (42 * i) + 50, (42 * j) + 50);
                 } else {
                     if (matrizAUsar[i][j] == 2) {
-                        fill(184, 200, 0);
-                        rect((42 * i) + 10, (42 * j) + 10, 40, 40);
+                        Image(coin, (42 * i) + 10, (42 * j) + 10, 40, 40);
+                        //fill(184, 200, 0);
+                        //rect((42 * i) + 10, (42 * j) + 10, 40, 40);
                     } else {
-                        fill(86, 0, 0);
-                        rect((42 * i) + 10, (42 * j) + 10, 40, 40);
+                        Image(pared, (42 * i) + 10, (42 * j) + 10, 40, 40);
+                        //fill(86, 0, 0);
+                        //rect((42 * i) + 10, (42 * j) + 10, 40, 40);
                     }
                 }
             }
@@ -362,10 +366,12 @@ function reset() {
 
 let pared;
 let cesped;
+let coin;
 
 function preload() {
     cesped = loadImage('assets/cesped.jpg');
     pared = loadImage('assets/pared.png');
+    coin = loadImage('assets/coin.jpg');
 }
 
 function setup() {
@@ -379,19 +385,21 @@ function setup() {
     for (let i = 0; i < matriz1.length; i++) {
         for (let j = 0; j < matriz1[0].length; j++) {
             if (matriz1[j][i] == 0) {
-                image(cesped, (42 * i) + 10, (42 * j) + 10, 40, 40)
-                    //fill(81, 187, 234);
-                    //rect((42 * i) + 10, (42 * i) + 10, 40, 40);
+                image(cesped, (42 * i) + 10, (42 * j) + 10, 40, 40);
+                //fill(81, 187, 234);
+                //rect((42 * i) + 10, (42 * i) + 10, 40, 40);
             } else {
                 if (matriz1[j][i] == 1) {
-                    fill(81, 187, 234);
-                    rect((42 * i) + 10, (42 * j) + 10, 40, 40);
+                    image(cesped, (42 * i) + 10, (42 * j) + 10, 40, 40);
+                    //fill(81, 187, 234);
+                    //rect((42 * i) + 10, (42 * j) + 10, 40, 40);
                     fill(247, 80, 80);
                     triangle((42 * i) + 10, (42 * j) + 50, (42 * i) + 30, (42 * j) + 10, (42 * i) + 50, (42 * j) + 50);
                 } else {
                     if (matriz1[i][j] == 2) {
-                        fill(184, 200, 0);
-                        rect((42 * i) + 10, (42 * j) + 10, 40, 40);
+                        Image(coin, (42 * i) + 10, (42 * j) + 10, 40, 40);
+                        //fill(184, 200, 0);
+                        //rect((42 * i) + 10, (42 * j) + 10, 40, 40);
                     } else {
                         image(pared, (42 * i) + 10, (42 * j) + 10, 40, 40);
                         //fill(86, 0, 0);
