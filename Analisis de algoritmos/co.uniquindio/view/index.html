@@ -1,6 +1,30 @@
 <!DOCTYPE html>
 <html lang="">
 
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyDVHR9Nb629kloFS4W2u8ARfx3wsciPQK4",
+          authDomain: "analisis-de-algoritmos.firebaseapp.com",
+          projectId: "analisis-de-algoritmos",
+          storageBucket: "analisis-de-algoritmos.appspot.com",
+          messagingSenderId: "964461888731",
+          appId: "1:964461888731:web:16fdb5ed178324430838fe",
+          measurementId: "G-1YNT7HQ2RS"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,7 +63,7 @@
         <div id="siguienteMundo">
             <button style="background-color: #A8E2F2;width: 100px; border-color: #733F7F; margin-left: 10px;" onclick="dibujarSiguienteNivel();">Siguiente Mundo</button>
         </div>
-        <div id="encuesta">
+        <form id="encuesta">
             <div id="preguntas">
                 <br/>
                 <div class="pregunta">
@@ -52,25 +76,30 @@
                     1. ¿Te parecieron dificiles los niveles?<br />
                 </div>
                 <div class="respuestas">
-                    <input type="radio" name="preg1" value="1" /> Sí<br />
-                    <input type="radio" name="preg1" value="2" /> No<br />
-                    <input type="radio" name="preg1" value="3" /> Ns/Nc<br />
+                    <div><input type="radio" id="p1r1" name="preg1r1" value="Si" /> Sí<br />
+                    </div>
+                    <div> <input type="radio" id="p1r2" name="preg1r2" value="No" /> No<br />
+                    </div>
+                   <div>
+                    <input type="radio" id="p1r3" name="preg1r3" value="Ns/Nc" /> Ns/Nc<br />
+                   </div>
                 </div>
                 <div class="pregunta">
                     <br/>2. ¿Cúal te pareció más complicado?<br />
                 </div>
                 <div class="respuestas">
-                    <input type="radio" name="preg2" value="1" /> Nivel 1<br />
-                    <input type="radio" name="preg2" value="2" /> Nivel 2<br />
-                    <input type="radio" name="preg2" value="3" /> Nivel 3<br />
-                    <input type="radio" name="preg2" value="4" /> Nivel 4<br />
-                    <input type="radio" name="preg2" value="5" /> Nivel 5<br />
+                    <input type="radio" id="p2r1" name="preg2r1" value="1" /> Nivel 1<br />
+                    <input type="radio" id="p2r2" name="preg2r2" value="2" /> Nivel 2<br />
+                    <input type="radio" id="p2r3" name="preg2r3" value="3" /> Nivel 3<br />
+                    <input type="radio" id="p2r4" name="preg2r4" value="4" /> Nivel 4<br />
+                    <input type="radio" id="p2r5" name="preg2r5" value="5" /> Nivel 5<br />
                 </div>
-                <button style="background-color: #A8E2F2;width: 100px; border-color: #733F7F; margin-top: 10px;" onclick="">Enviar respuestas</button>
+                <button id ="btn guardar" style="background-color: #A8E2F2;width: 100px; border-color: #733F7F; margin-top: 10px;" onclick="">Enviar respuestas</button>
 
             </div>
         </div>
     </div>
 </body>
 
+    <script type = "module" src="./formulario.js"></script>
 </html>
