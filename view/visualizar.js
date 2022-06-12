@@ -364,8 +364,12 @@ let pared;
 let cesped;
 
 function preload() {
+<<<<<<< HEAD
     pared = loadImage('assets/pared.jpg');
     cesped = loadImage('assets/cesped.png');
+=======
+    img = loadImage('assets/pared.png');
+>>>>>>> 22d260b4736b44f16aee3f9598960ef1cc423d01
 }
 
 function setup() {
