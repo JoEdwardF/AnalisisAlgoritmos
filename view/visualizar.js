@@ -372,7 +372,7 @@ function setup() {
     // crear el lienzo
     createCanvas(500, 450);
     //background(200);
-    //background();
+    background('#A54400');
     // Definir colores
     fill(204, 101, 192, 127);
     stroke(127, 63, 120);
