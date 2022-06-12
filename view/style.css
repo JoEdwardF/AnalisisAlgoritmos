@@ -42,8 +42,3 @@ div#encuesta {
     height: 400px;
     background-color: #44b7d7;
 }
-
-.contenedor::-webkit-scrollbar {
-    width: 7px;
-    background: black;
-}
