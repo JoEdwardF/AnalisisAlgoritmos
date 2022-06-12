@@ -364,8 +364,8 @@ let pared;
 let cesped;
 
 function preload() {
-    pared = loadImage('assets/pared.jpg');
-    cesped = loadImage('assets/cesped.png');
+    cesped = loadImage('assets/cesped.jpg');
+    pared = loadImage('assets/pared.png');
 }
 
 function setup() {
