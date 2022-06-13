@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Analisis de Algoritmos</title>
+    Permissions-Policy: interest-cohort=();
+
+    < <style>
+        body { padding: 0; margin: 0; }
+        </style>
+</head>
+
+<body style="background-color: #19e5e6;">
+
+    <div id="general">
+
+        <div id="botones">
+            <h1 id="mundo" style="margin-top: 10px; margin-left: 10px"></h1>
+
+            <button style="background-color: #A8E2F2;margin-top: 10px;width: 100px;margin-left: 10px; border-color: #733F7F ; " onclick="izquierda(); ">Izquierda</button>
+            <button style="background-color: #A8E2F2;margin-top: 10px;width: 100px; border-color: #733F7F " onclick="derecha(); ">Derecha</button>
+            <button style="background-color: #A8E2F2;margin-top: 10px;width: 100px; border-color: #733F7F " onclick="arriba(); ">Arriba</button>
+            <button style="background-color: #A8E2F2;margin-top: 10px;width: 100px; border-color: #733F7F " onclick="abajo(); ">Abajo</button>
+        </div>
+        <div>
+            <button style="background-color: #A8E2F2;width: 100px; border-color: #733F7F; margin-left: 500px;" onclick="ejecuting();">Ejecutar</button>
+        </div>
+        <div>
+            <script src="../p5.js "></script>
+            <script src="visualizar.js"></script>
+        </div>
+        <div id="listaMov">
+            <div id="titulo">
+                <h4> Lista de movimientos: </h5>
+            </div>
+            <div id="listado">
+                <scroll-container>
+                    <scroll-page id="listaMovimiento"></scroll-page>
+                </scroll-container>
+            </div>
+        </div>
+
+        <div id="puntajes">
+            <div id="valores">
+                <p id="listaMovimiento"></p>
+                <p id="puntajeNivel1"></p>
+                <p id="puntajeNivel2"></p>
+                <p id="puntajeNivel3"></p>
+                <p id="puntajeNivel4"></p>
+                <p id="puntajeNivel5"></p>
+            </div>
+        </div>
+
+
+        <div id="encuesta">
+            <form id="encu">
+
+                <div id="preguntas">
+                    <br/>
+                    <div class="pregunta">
+                        ¿Cúal es tú nombre?
+                        <input type="text " id="name" name="name " required minlength="4 " maxlength="8 " size="20 ">
+                    </div>
+                    <br/>
+
+                    <div class="pregunta">
+                        1. ¿Que tan dificil del 1(fácil) al 5(dificil) le pareció el Primer nivel?<br />
+                    </div>
+                    <div class="respuestas">
+                        <input type="radio" id="p1r1" name="preg2r1" value="1" /> 1<br />
+                        <input type="radio" id="p1r2" name="preg2r2" value="2" /> 2<br />
+                        <input type="radio" id="p1r3" name="preg2r3" value="3" /> 3<br />
+                        <input type="radio" id="p1r4" name="preg2r4" value="4" /> 4<br />
+                        <input type="radio" id="p1r5" name="preg2r5" value="5" /> 5<br />
+                    </div>
+                    <div class="pregunta">
+                        2. ¿Que tan dificil del 1 (fácil) al 5(dificil) le pareció el Segundo nivel?<br />
+                    </div>
+                    <div class="respuestas">
+                        <input type="radio" id="p2r1" name="preg2r1" value="1" /> 1<br />
+                        <input type="radio" id="p2r2" name="preg2r2" value="2" /> 2<br />
+                        <input type="radio" id="p2r3" name="preg2r3" value="3" /> 3<br />
+                        <input type="radio" id="p2r4" name="preg2r4" value="4" /> 4<br />
+                        <input type="radio" id="p2r5" name="preg2r5" value="5" /> 5<br />
+                    </div>
+                    <div class="pregunta">
+                        3. ¿Que tan dificil del 1 (fácil) al 5(dificil) le pareció el Tercer nivel?<br />
+                    </div>
+                    <div class="respuestas">
+                        <input type="radio" id="p3r1" name="preg3r1" value="1" /> 1<br />
+                        <input type="radio" id="p3r2" name="preg3r2" value="2" /> 2<br />
+                        <input type="radio" id="p3r3" name="preg3r3" value="3" /> 3<br />
+                        <input type="radio" id="p3r4" name="preg3r4" value="4" /> 4<br />
+                        <input type="radio" id="p3r5" name="preg3r5" value="5" /> 5<br />
+                    </div>
+                    <div class="pregunta">
+                        4. ¿Que tan dificil del 1 (fácil) al 5(dificil) le pareció el Cuarto nivel?<br />
+                    </div>
+                    <div class="respuestas">
+                        <input type="radio" id="p4r1" name="preg4r1" value="1" /> 1<br />
+                        <input type="radio" id="p4r2" name="preg4r2" value="2" /> 2<br />
+                        <input type="radio" id="p4r3" name="preg4r3" value="3" /> 3<br />
+                        <input type="radio" id="p4r4" name="preg4r4" value="4" /> 4<br /> <input type="radio" id="p4r5" name="preg4r5" value="5" /> 5<br />
+                    </div>
+                    <div class="pregunta">
+                        5. ¿Que tan dificil del 1 (fácil) al 5(dificil) le pareció el Quinto nivel?<br />
+                    </div>
+                    <div class="respuestas">
+                        <input type="radio" id="p5r1" name="preg5r1" value="1" /> 1 <br />
+                        <input type="radio" id="p5r2" name="preg5r2" value="2" /> 2 <br />
+                        <input type="radio" id="p5r3" name="preg5r3" value="3" /> 3 <br />
+                        <input type="radio" id="p5r4" name="preg5r4" value="4" /> 4 <br />
+                        <input type="radio" id="p5r5" name="preg5r5" value="5" /> 5<br />
+                    </div>
+                    <p>
+                        <label for="favoriteOnly">Selecciona tu favorito:</label>
+                        <select name="favoriteOnly" id="favoriteOnly">
+                           <option>1</option>
+                           <option>2</option>
+                           <option>3</option>
+                           <option>4</option>
+                           <option>5</option>
+                         </select>
+                    </p>
+
+                    <button style="background-color: #A8E2F2;width: 100px; border-color: #733F7F; margin-top: 10px; " onclick=" ">Enviar respuestas</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script type="module" src="./formulario.js"></script>
+
+</html>

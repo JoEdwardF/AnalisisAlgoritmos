@@ -1,0 +1,100 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+div#general {
+    width: auto;
+    height: 70px;
+}
+
+div#preguntas {
+    width: 100;
+    height: 100;
+    margin-left: 10px;
+}
+
+div#titulo {
+    margin-left: 10px;
+}
+
+div#listado {
+    margin-left: 20px;
+    margin-top: 10px;
+    height: 40px;
+    scroll-behavior: auto;
+}
+
+div#botones {
+    width: 700px;
+    height: auto;
+}
+
+div#listaMov {
+    margin-left: 450px;
+    margin-top: 10px;
+    border-color: black;
+    width: 200px;
+    height: 400px;
+    background-color: #44b7d7;
+}
+
+div#puntajes {
+    margin-left: 10px;
+    margin-top: 10px;
+    border-color: black;
+    width: 420px;
+    height: 100px;
+    background-color: #44b7d7;
+}
+
+div#valores {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+div#siguienteMundo {
+    width: 700px;
+    margin-top: 10px;
+}
+
+div#encuesta {
+    margin-left: 10px;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    border-color: black;
+    width: 600px;
+    height: 650px;
+    background-color: #44b7d7;
+}
+
+a {
+    display: inline-block;
+    width: 50px;
+    text-decoration: none;
+}
+
+nav,
+scroll-container {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+nav {
+    width: 339px;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+scroll-container {
+    display: block;
+    height: 371px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+scroll-page {
+    display: flex;
+    height: 100%;
+}
