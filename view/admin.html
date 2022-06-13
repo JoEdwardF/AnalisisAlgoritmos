@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: rgb(202, 202, 202);">
+
+    <table style="border-spacing: 20px; margin: 20px; border-spacing: 10px; text-align: center; border: black  5px solid;">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Intentos Primer nivel</th>
+                <th>Intentos Segundo nivel</th>
+                <th>Intentos Tercer nivel</th>
+                <th>Intentos Cuarto nivel</th>
+                <th>Intentos Quinto nivel</th>
+
+                <th>Puntaje Primer nivel</th>
+                <th>Puntaje Segundo nivel</th>
+                <th>Puntaje Tercer nivel</th>
+                <th>Puntaje Cuarto nivel</th>
+                <th>Puntaje Quinto nivel</th>
+
+                <th>Satisfacción Primer nivel</th>
+                <th>Satisfacción Segundo nivel</th>
+                <th>Satisfacción Tercer nivel</th>
+                <th>Satisfacción Cuarto nivel</th>
+                <th>Satisfacción Quinto nivel</th>
+            </tr>
+        </thead>
+        <tbody id="con">
+
+        </tbody>
+
+    </table>
+
+</body>
+
+</html>
+
+<script type="module" src="./proceso.js"></script>
+
+<script>
+    function tablasss() {
+        for (var i = 0; i < 10; i++) {
+            con.innerHTML = con.innerHTML +
+                '<th>' + +'</th>' +
+                '<th>Intentos Segundo nivel</th>' +
+                '<th>Intentos Tercer nivel</th>' +
+                '<th>Intentos Cuarto nivel</th>' +
+                '<th>Intentos Quinto nivel</th>';
+        }
+    }
+</script>

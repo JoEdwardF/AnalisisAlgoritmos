@@ -1,13 +1,19 @@
  import { guardarRespuesta, getRespuestas } from './database.js'
 
+ export { array };
+
  //import {getPuntajeNivel1, getPuntajes} from './visualizar.js'
+ var array = new Array();
 
  window.addEventListener('DOMContentLoaded', async() => {
      const encuestas = await getRespuestas()
+
      encuestas.forEach(doc => {
-         console.log(doc.data())
+         array.push(doc.data().nombre);
+         console.log(doc.data());
      })
- })
+
+ });
 
  const encuesta = document.getElementById('encu');
 
