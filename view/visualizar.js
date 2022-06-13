@@ -82,7 +82,8 @@ var array = new Array();
 var positionI = 1;
 var positionJ = 1;
 
-/*class getPuntajes{
+
+class getPuntajes{
     get getPuntajeNivel1(){
         return puntajeNivel1;
     }
@@ -98,16 +99,46 @@ function getPuntajeNivel4(){
 }
 function getPuntajeNivel5(){
     return puntajeNivel5;
-}*/
+}
 
 function escribir() {
 
     var texto = "";
 
     for (let i = 0; i < array.length; i++) {
-        texto += " -" + array[i] + "<br>";
+        texto += (i + 1) + ") " + array[i] + "<br>";
     }
+    escribirPuntajes();
     document.getElementById("listaMovimiento").innerHTML = texto;
+}
+
+function escribirPuntajes() {
+    if (puntajeNivel1 >= 100) {
+        document.getElementById("puntajeNivel1").innerHTML = "Nivel 1 no completado";
+    } else {
+        document.getElementById("puntajeNivel1").innerHTML = "Tu puntaje en el nivel 1 es de: " + puntajeNivel1;
+    }
+    if (puntajeNivel2 >= 100) {
+        document.getElementById("puntajeNivel2").innerHTML = "Nivel 2 no completado";
+    } else {
+        document.getElementById("puntajeNivel2").innerHTML = "Tu puntaje en el nivel 2 es de: " + puntajeNivel2;
+    }
+    if (puntajeNivel3 >= 100) {
+        document.getElementById("puntajeNivel3").innerHTML = "Nivel 3 no completado";
+    } else {
+        document.getElementById("puntajeNivel3").innerHTML = "Tu puntaje en el nivel 3 es de: " + puntajeNivel3;
+    }
+    if (puntajeNivel4 >= 100) {
+        document.getElementById("puntajeNivel4").innerHTML = "Nivel 4 no completado";
+    } else {
+        document.getElementById("puntajeNivel4").innerHTML = "Tu puntaje en el nivel 4 es de: " + puntajeNivel4;
+    }
+    if (puntajeNivel5 >= 100) {
+        document.getElementById("puntajeNivel5").innerHTML = "Nivel 5 no completado";
+    } else {
+        document.getElementById("puntajeNivel5").innerHTML = "Tu puntaje en el nivel 5 es de: " + puntajeNivel5;
+    }
+
 }
 
 function ejecuting() {
@@ -134,51 +165,52 @@ function ejecutarRecursivo(matrizAusar, i) {
     if (i == array.length) {
         if (positionI == 8 && positionJ == 8) {
             alert("Llegaste a la meta, felicidades!");
-            if( nivel==0 ){
+            if (nivel == 0) {
                 intentosNivel1 += 1;
-                if( array.length<puntajeNivel1 ){
+                if (array.length < puntajeNivel1) {
                     puntajeNivel1 = array.length;
-                    console.log(puntajeNivel1);    
+                    console.log(puntajeNivel1);
                 }
-            }else if( nivel==1 ){
+            } else if (nivel == 1) {
                 intentosNivel2 += 1;
-                if( array.length<puntajeNivel2 ){
+                if (array.length < puntajeNivel2) {
                     puntajeNivel2 = array.length;
-                    console.log(puntajeNivel2);    
+                    console.log(puntajeNivel2);
                 }
-            }else if( nivel==2 ){
+            } else if (nivel == 2) {
                 intentosNivel3 += 1;
-                if( array.length<puntajeNivel3 ){
+                if (array.length < puntajeNivel3) {
                     puntajeNivel3 = array.length;
-                    console.log(puntajeNivel3);    
-                }            
-            }else if( nivel==3 ){
-                intentosNivel4 += 1;
-                if( array.length<puntajeNivel4 ){
-                    puntajeNivel4 = array.length;
-                    console.log(puntajeNivel4);    
+                    console.log(puntajeNivel3);
                 }
-            }else{
+            } else if (nivel == 3) {
+                intentosNivel4 += 1;
+                if (array.length < puntajeNivel4) {
+                    puntajeNivel4 = array.length;
+                    console.log(puntajeNivel4);
+                }
+            } else {
                 intentosNivel5 += 1;
-                if( array.length<puntajeNivel5 ){
+                if (array.length < puntajeNivel5) {
                     puntajeNivel5 = array.length;
-                    console.log(puntajeNivel5);    
+                    console.log(puntajeNivel5);
                 }
             }
             dibujarSiguienteNivel();
+            document.getElementById("mundo").innerHTML = "Nivel " + (nivel + 1);
             array.splice(0, array.length);
             escribir();
         } else {
             alert("No acabaste en la meta, intenta de nuevo!");
-            if( nivel==0 ){
+            if (nivel == 0) {
                 intentosNivel1 += 1;
-            }else if( nivel==1 ){
+            } else if (nivel == 1) {
                 intentosNivel2 += 1;
-            }else if( nivel==2 ){
+            } else if (nivel == 2) {
                 intentosNivel3 += 1;
-            }else if( nivel==3 ){
+            } else if (nivel == 3) {
                 intentosNivel4 += 1;
-            }else{
+            } else {
                 intentosNivel5 += 1;
             }
             setTimeout(reset, 1000);
@@ -428,6 +460,10 @@ function setup() {
     fill(204, 101, 192, 127);
     stroke(127, 63, 120);
 
+    escribirPuntajes();
+    document.getElementById("mundo").innerHTML = "Nivel " + (nivel + 1);
+
+
     for (let i = 0; i < matriz1.length; i++) {
         for (let j = 0; j < matriz1[0].length; j++) {
             if (matriz1[j][i] == 0) {
@@ -457,4 +493,3 @@ function setup() {
     }
 
 }
-
