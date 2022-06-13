@@ -96,28 +96,38 @@ function escribir() {
 function escribirPuntajes() {
     if (puntajeNivel1 >= 100) {
         document.getElementById("puntajeNivel1").innerHTML = "Nivel 1 no completado";
+        document.getElementById("intentosNivel1").innerHTML = "Llevas " + intentosNivel1 + " en el nivel 1";
     } else {
         document.getElementById("puntajeNivel1").innerHTML = "Tu puntaje en el nivel 1 es de: " + puntajeNivel1;
+        document.getElementById("intentosNivel1").innerHTML = "Llevas " + intentosNivel1 + " en el nivel 1";
     }
     if (puntajeNivel2 >= 100) {
         document.getElementById("puntajeNivel2").innerHTML = "Nivel 2 no completado";
+        document.getElementById("intentosNivel2").innerHTML = "Llevas " + intentosNivel2 + " en el nivel 2";
     } else {
         document.getElementById("puntajeNivel2").innerHTML = "Tu puntaje en el nivel 2 es de: " + puntajeNivel2;
+        document.getElementById("intentosNivel2").innerHTML = "Llevas " + intentosNivel2 + " en el nivel 2";
     }
     if (puntajeNivel3 >= 100) {
         document.getElementById("puntajeNivel3").innerHTML = "Nivel 3 no completado";
+        document.getElementById("intentosNivel3").innerHTML = "Llevas " + intentosNivel3 + " en el nivel 3";
     } else {
         document.getElementById("puntajeNivel3").innerHTML = "Tu puntaje en el nivel 3 es de: " + puntajeNivel3;
+        document.getElementById("intentosNivel3").innerHTML = "Llevas " + intentosNivel3 + " en el nivel 3";
     }
     if (puntajeNivel4 >= 100) {
         document.getElementById("puntajeNivel4").innerHTML = "Nivel 4 no completado";
+        document.getElementById("intentosNivel4").innerHTML = "Llevas " + intentosNivel4 + " en el nivel 4";
     } else {
         document.getElementById("puntajeNivel4").innerHTML = "Tu puntaje en el nivel 4 es de: " + puntajeNivel4;
+        document.getElementById("intentosNivel4").innerHTML = "Llevas " + intentosNivel4 + " en el nivel 4";
     }
     if (puntajeNivel5 >= 100) {
         document.getElementById("puntajeNivel5").innerHTML = "Nivel 5 no completado";
+        document.getElementById("intentosNivel5").innerHTML = "Llevas " + intentosNivel5 + " en el nivel 5";
     } else {
         document.getElementById("puntajeNivel5").innerHTML = "Tu puntaje en el nivel 5 es de: " + puntajeNivel5;
+        document.getElementById("intentosNivel5").innerHTML = "Llevas " + intentosNivel5 + " en el nivel 5";
     }
 
 }

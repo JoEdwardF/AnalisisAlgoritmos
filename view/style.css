@@ -23,6 +23,7 @@ div#listado {
     margin-top: 10px;
     height: 40px;
     scroll-behavior: auto;
+    line-height: 20px;
 }
 
 div#botones {
@@ -44,7 +45,7 @@ div#puntajes {
     margin-top: 10px;
     border-color: black;
     width: 420px;
-    height: 100px;
+    line-height: 30px;
     background-color: #44b7d7;
 }
 
