@@ -66,15 +66,39 @@ var matriz5 = [
     [3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
 ];
 
-var puntajeNivel1;
-var puntajeNivel2;
-var puntajeNivel3;
-var puntajeNivel4;
-var puntajeNivel5;
+var puntajeNivel1 = 100;
+var puntajeNivel2 = 100;
+var puntajeNivel3 = 100;
+var puntajeNivel4 = 100;
+var puntajeNivel5 = 100;
+
+var intentosNivel1 = 0;
+var intentosNivel2 = 0;
+var intentosNivel3 = 0;
+var intentosNivel4 = 0;
+var intentosNivel5 = 0;
 
 var array = new Array();
 var positionI = 1;
 var positionJ = 1;
+
+class getPuntajes{
+    get getPuntajeNivel1(){
+        return puntajeNivel1;
+    }
+}
+function getPuntajeNivel2(){
+    return puntajeNivel2;
+}
+export const getPuntajeNivel3=()=>{
+    return puntajeNivel3;
+}
+function getPuntajeNivel4(){
+    return puntajeNivel4;
+}
+function getPuntajeNivel5(){
+    return puntajeNivel5;
+}
 
 function escribir() {
 
@@ -110,11 +134,53 @@ function ejecutarRecursivo(matrizAusar, i) {
     if (i == array.length) {
         if (positionI == 8 && positionJ == 8) {
             alert("Llegaste a la meta, felicidades!");
+            if( nivel==0 ){
+                intentosNivel1 += 1;
+                if( array.length<puntajeNivel1 ){
+                    puntajeNivel1 = array.length;
+                    console.log(puntajeNivel1);    
+                }
+            }else if( nivel==1 ){
+                intentosNivel2 += 1;
+                if( array.length<puntajeNivel2 ){
+                    puntajeNivel2 = array.length;
+                    console.log(puntajeNivel2);    
+                }
+            }else if( nivel==2 ){
+                intentosNivel3 += 1;
+                if( array.length<puntajeNivel3 ){
+                    puntajeNivel3 = array.length;
+                    console.log(puntajeNivel3);    
+                }            
+            }else if( nivel==3 ){
+                intentosNivel4 += 1;
+                if( array.length<puntajeNivel4 ){
+                    puntajeNivel4 = array.length;
+                    console.log(puntajeNivel4);    
+                }
+            }else{
+                intentosNivel5 += 1;
+                if( array.length<puntajeNivel5 ){
+                    puntajeNivel5 = array.length;
+                    console.log(puntajeNivel5);    
+                }
+            }
             dibujarSiguienteNivel();
             array.splice(0, array.length);
             escribir();
         } else {
             alert("No acabaste en la meta, intenta de nuevo!");
+            if( nivel==0 ){
+                intentosNivel1 += 1;
+            }else if( nivel==1 ){
+                intentosNivel2 += 1;
+            }else if( nivel==2 ){
+                intentosNivel3 += 1;
+            }else if( nivel==3 ){
+                intentosNivel4 += 1;
+            }else{
+                intentosNivel5 += 1;
+            }
             setTimeout(reset, 1000);
             array.splice(0, array.length);
             escribir();
@@ -172,16 +238,6 @@ function ejecutar() {
         }
         sleep(1000);
     }
-
-    /**
-    if (positionI == 9 && positionJ == 9) {
-        alert("Llegaste a la meta, felicidades!");
-        dibujarSiguienteNivel();
-    } else {
-        alert("No acabaste en la meta, intenta de nuevo!");
-        reset();
-    }
-     */
 
     array.splice(0, array.length);
     escribir();
@@ -401,3 +457,4 @@ function setup() {
     }
 
 }
+
