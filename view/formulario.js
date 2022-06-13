@@ -1,7 +1,6 @@
  import { guardarRespuesta, getRespuestas } from './database.js'
 
  //import {getPuntajeNivel1, getPuntajes} from './visualizar.js'
- import punt1 from '/visualizar.js';
 
  window.addEventListener('DOMContentLoaded', async() => {
      const encuestas = await getRespuestas()
@@ -113,9 +112,6 @@
      console.log(respuesta3);
      console.log(respuesta4);
      console.log(respuesta5);*/
-
-
-     console.log(punt1);
 
      guardarRespuesta(name.value, respuesta1, respuesta2, respuesta3, respuesta4, respuesta5);
  })
