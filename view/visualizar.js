@@ -82,7 +82,7 @@ var array = new Array();
 var positionI = 1;
 var positionJ = 1;
 
-class getPuntajes{
+/*class getPuntajes{
     get getPuntajeNivel1(){
         return puntajeNivel1;
     }
@@ -98,7 +98,7 @@ function getPuntajeNivel4(){
 }
 function getPuntajeNivel5(){
     return puntajeNivel5;
-}
+}*/
 
 function escribir() {
 
