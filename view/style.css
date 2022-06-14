@@ -22,6 +22,7 @@ div#listado {
     margin-left: 20px;
     margin-top: 10px;
     height: 40px;
+    border-color: #79ff5c;
     scroll-behavior: auto;
     line-height: 20px;
 }
@@ -34,17 +35,16 @@ div#botones {
 div#listaMov {
     margin-left: 450px;
     margin-top: 10px;
-    border-color: black;
+    border-color: #79ff5c;
     width: 200px;
     height: 400px;
     background-color: #44b7d7;
 }
 
 div#puntajes {
-    margin-left: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
     border-color: black;
-    width: 420px;
+    width: 440px;
     line-height: 30px;
     background-color: #44b7d7;
 }
@@ -60,12 +60,11 @@ div#siguienteMundo {
 }
 
 div#encuesta {
-    margin-left: 10px;
-    margin-top: 100px;
+    margin-top: 10px;
     margin-bottom: 10px;
     border-color: black;
     width: 600px;
-    height: 650px;
+    height: 670px;
     background-color: #44b7d7;
 }
 

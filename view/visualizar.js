@@ -96,38 +96,38 @@ function escribir() {
 function escribirPuntajes() {
     if (puntajeNivel1 >= 100) {
         document.getElementById("puntajeNivel1").innerHTML = "Nivel 1 no completado";
-        document.getElementById("intentosNivel1").innerHTML = "Llevas " + intentosNivel1 + " en el nivel 1";
+        document.getElementById("intentosNivel1").innerHTML = "Llevas " + intentosNivel1 + " intentos en el nivel 1";
     } else {
         document.getElementById("puntajeNivel1").innerHTML = "Tu puntaje en el nivel 1 es de: " + puntajeNivel1;
-        document.getElementById("intentosNivel1").innerHTML = "Llevas " + intentosNivel1 + " en el nivel 1";
+        document.getElementById("intentosNivel1").innerHTML = "Llevas " + intentosNivel1 + " intentos en el nivel 1";
     }
     if (puntajeNivel2 >= 100) {
         document.getElementById("puntajeNivel2").innerHTML = "Nivel 2 no completado";
-        document.getElementById("intentosNivel2").innerHTML = "Llevas " + intentosNivel2 + " en el nivel 2";
+        document.getElementById("intentosNivel2").innerHTML = "Llevas " + intentosNivel2 + " intentos en el nivel 2";
     } else {
         document.getElementById("puntajeNivel2").innerHTML = "Tu puntaje en el nivel 2 es de: " + puntajeNivel2;
-        document.getElementById("intentosNivel2").innerHTML = "Llevas " + intentosNivel2 + " en el nivel 2";
+        document.getElementById("intentosNivel2").innerHTML = "Llevas " + intentosNivel2 + " intentos en el nivel 2";
     }
     if (puntajeNivel3 >= 100) {
         document.getElementById("puntajeNivel3").innerHTML = "Nivel 3 no completado";
-        document.getElementById("intentosNivel3").innerHTML = "Llevas " + intentosNivel3 + " en el nivel 3";
+        document.getElementById("intentosNivel3").innerHTML = "Llevas " + intentosNivel3 + " intentos en el nivel 3";
     } else {
         document.getElementById("puntajeNivel3").innerHTML = "Tu puntaje en el nivel 3 es de: " + puntajeNivel3;
-        document.getElementById("intentosNivel3").innerHTML = "Llevas " + intentosNivel3 + " en el nivel 3";
+        document.getElementById("intentosNivel3").innerHTML = "Llevas " + intentosNivel3 + " intentos en el nivel 3";
     }
     if (puntajeNivel4 >= 100) {
         document.getElementById("puntajeNivel4").innerHTML = "Nivel 4 no completado";
-        document.getElementById("intentosNivel4").innerHTML = "Llevas " + intentosNivel4 + " en el nivel 4";
+        document.getElementById("intentosNivel4").innerHTML = "Llevas " + intentosNivel4 + " intentos en el nivel 4";
     } else {
         document.getElementById("puntajeNivel4").innerHTML = "Tu puntaje en el nivel 4 es de: " + puntajeNivel4;
-        document.getElementById("intentosNivel4").innerHTML = "Llevas " + intentosNivel4 + " en el nivel 4";
+        document.getElementById("intentosNivel4").innerHTML = "Llevas " + intentosNivel4 + " intentos en el nivel 4";
     }
     if (puntajeNivel5 >= 100) {
         document.getElementById("puntajeNivel5").innerHTML = "Nivel 5 no completado";
-        document.getElementById("intentosNivel5").innerHTML = "Llevas " + intentosNivel5 + " en el nivel 5";
+        document.getElementById("intentosNivel5").innerHTML = "Llevas " + intentosNivel5 + " intentos en el nivel 5";
     } else {
         document.getElementById("puntajeNivel5").innerHTML = "Tu puntaje en el nivel 5 es de: " + puntajeNivel5;
-        document.getElementById("intentosNivel5").innerHTML = "Llevas " + intentosNivel5 + " en el nivel 5";
+        document.getElementById("intentosNivel5").innerHTML = "Llevas " + intentosNivel5 + " intentos en el nivel 5";
     }
 
 }
@@ -298,12 +298,14 @@ function moverDerecha(matrizAUsar) {
     if (positionI + 1 < matrizAUsar.length && positionJ < matrizAUsar[0].length) {
 
         if (matrizAUsar[positionI + 1][positionJ] != 3) {
-            if (positionI == 9 && positionJ == 9) {
-                fill(184, 200, 0);
-                rect((42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
+            if (positionI == 8 && positionJ == 8) {
+                image(coin, (42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
+                //fill(184, 200, 0);
+                //rect((42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
             } else {
-                fill(81, 187, 234);
-                rect((42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
+                image(cesped, (42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
+                //fill(81, 187, 234);
+                //rect((42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
             }
             positionI += 1;
             console.log(1);
@@ -321,12 +323,14 @@ function moverIzquierda(matrizAUsar) {
     if (positionI - 1 >= 0 && positionJ < matrizAUsar[0].length) {
         if (matrizAUsar[positionI - 1][positionJ] != 3) {
 
-            if (positionI == 9 && positionJ == 9) {
-                fill(184, 200, 0);
-                rect((42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
+            if (positionI == 8 && positionJ == 8) {
+                image(coin, (42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
+                //fill(184, 200, 0);
+                //rect((42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
             } else {
-                fill(81, 187, 234);
-                rect((42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
+                image(cesped, (42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
+                //fill(81, 187, 234);
+                //rect((42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
             }
             positionI -= 1;
             console.log(1);
@@ -344,12 +348,14 @@ function moverArriba(matrizAUsar) {
     if (positionI < matrizAUsar.length && positionJ - 1 >= 0) {
         if (matrizAUsar[positionI][positionJ - 1] != 3) {
 
-            if (positionI == 9 && positionJ == 9) {
-                fill(184, 200, 0);
-                rect((42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
+            if (positionI == 8 && positionJ == 8) {
+                image(coin, (42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
+                //fill(184, 200, 0);
+                //rect((42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
             } else {
-                fill(81, 187, 234);
-                rect((42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
+                image(cesped, (42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
+                //fill(81, 187, 234);
+                //rect((42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
             }
             positionJ -= 1;
             console.log(1);
@@ -367,12 +373,14 @@ function moverAbajo(matrizAUsar) {
     if (positionI < matrizAUsar.length && positionJ + 1 < matrizAUsar[0].length) {
         if (matrizAUsar[positionI][positionJ + 1] != 3) {
 
-            if (positionI == 9 && positionJ == 9) {
-                fill(184, 200, 0);
-                rect((42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
+            if (positionI == 8 && positionJ == 8) {
+                image(coin, (42 * i) + 10, (42 * j) + 10, 40, 40);
+                //fill(184, 200, 0);
+                //rect((42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
             } else {
-                fill(81, 187, 234);
-                rect((42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
+                image(cesped, (42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
+                //fill(81, 187, 234);
+                //rect((42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
             }
             positionJ += 1;
             console.log(1);
@@ -417,25 +425,25 @@ function reset() {
     for (let i = 0; i < matrizAUsar.length; i++) {
         for (let j = 0; j < matrizAUsar[0].length; j++) {
             if (matrizAUsar[i][j] == 0) {
-                //image(cesped, (42 * i) + 10, (42 * j) + 10, 40, 40);
-                fill(81, 187, 234);
-                rect((42 * i) + 10, (42 * j) + 10, 40, 40);
+                image(cesped, (42 * i) + 10, (42 * j) + 10, 40, 40);
+                //fill(81, 187, 234);
+                //rect((42 * i) + 10, (42 * j) + 10, 40, 40);
             } else {
                 if (matrizAUsar[i][j] == 1) {
-                    //image(cesped, (42 * i) + 10, (42 * j) + 10, 40, 40);
-                    fill(81, 187, 234);
-                    rect((42 * i) + 10, (42 * j) + 10, 40, 40);
+                    image(cesped, (42 * i) + 10, (42 * j) + 10, 40, 40);
+                    //fill(81, 187, 234);
+                    //rect((42 * i) + 10, (42 * j) + 10, 40, 40);
                     fill(247, 80, 80);
                     triangle((42 * i) + 10, (42 * j) + 50, (42 * i) + 30, (42 * j) + 10, (42 * i) + 50, (42 * j) + 50);
                 } else {
                     if (matrizAUsar[i][j] == 2) {
-                        //Image(coin, (42 * i) + 10, (42 * j) + 10, 40, 40);
-                        fill(184, 200, 0);
-                        rect((42 * i) + 10, (42 * j) + 10, 40, 40);
+                        image(coin, (42 * i) + 10, (42 * j) + 10, 40, 40);
+                        //fill(184, 200, 0);
+                        //rect((42 * i) + 10, (42 * j) + 10, 40, 40);
                     } else {
-                        //Image(pared, (42 * i) + 10, (42 * j) + 10, 40, 40);
-                        fill(86, 0, 0);
-                        rect((42 * i) + 10, (42 * j) + 10, 40, 40);
+                        image(pared, (42 * i) + 10, (42 * j) + 10, 40, 40);
+                        //fill(86, 0, 0);
+                        //rect((42 * i) + 10, (42 * j) + 10, 40, 40);
                     }
                 }
             }
@@ -443,10 +451,21 @@ function reset() {
     }
 }
 
+var cesped;
+var coin;
+var pared;
+
+function preload() {
+
+    cesped = loadImage("assets/cesped.png");
+    coin = loadImage("assets/coin.jpg");
+    pared = loadImage("assets/pared.png");
+}
+
 function setup() {
     // crear el lienzo
-    createCanvas(500, 450);
-    //background(200);
+    createCanvas(440, 440);
+    background('#3F2212');
     // Definir colores
     fill(204, 101, 192, 127);
     stroke(127, 63, 120);
@@ -458,25 +477,25 @@ function setup() {
     for (let i = 0; i < matriz1.length; i++) {
         for (let j = 0; j < matriz1[0].length; j++) {
             if (matriz1[j][i] == 0) {
-                //image(cesped, (42 * i) + 10, (42 * j) + 10, 40, 40);
-                fill(81, 187, 234);
-                rect((42 * i) + 10, (42 * j) + 10, 40, 40);
+                image(cesped, (42 * i) + 10, (42 * j) + 10, 40, 40);
+                //fill(81, 187, 234);
+                //rect((42 * i) + 10, (42 * j) + 10, 40, 40);
             } else {
                 if (matriz1[j][i] == 1) {
-                    //image(cesped, (42 * i) + 10, (42 * j) + 10, 40, 40);
-                    fill(81, 187, 234);
-                    rect((42 * i) + 10, (42 * j) + 10, 40, 40);
+                    image(cesped, (42 * i) + 10, (42 * j) + 10, 40, 40);
+                    //fill(81, 187, 234);
+                    //rect((42 * i) + 10, (42 * j) + 10, 40, 40);
                     fill(247, 80, 80);
                     triangle((42 * i) + 10, (42 * j) + 50, (42 * i) + 30, (42 * j) + 10, (42 * i) + 50, (42 * j) + 50);
                 } else {
                     if (matriz1[i][j] == 2) {
-                        //Image(coin, (42 * i) + 10, (42 * j) + 10, 40, 40);
-                        fill(184, 200, 0);
-                        rect((42 * i) + 10, (42 * j) + 10, 40, 40);
+                        image(coin, (42 * i) + 10, (42 * j) + 10, 40, 40);
+                        //fill(184, 200, 0);
+                        //rect((42 * i) + 10, (42 * j) + 10, 40, 40);
                     } else {
-                        //image(pared, (42 * i) + 10, (42 * j) + 10, 40, 40);
-                        fill(86, 0, 0);
-                        rect((42 * i) + 10, (42 * j) + 10, 40, 40);
+                        image(pared, (42 * i) + 10, (42 * j) + 10, 40, 40);
+                        //fill(86, 0, 0);
+                        //rect((42 * i) + 10, (42 * j) + 10, 40, 40);
                     }
                 }
             }
