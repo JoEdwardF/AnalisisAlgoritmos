@@ -299,7 +299,8 @@ function moverDerecha(matrizAUsar) {
 
         if (matrizAUsar[positionI + 1][positionJ] != 3) {
             if (positionI == 8 && positionJ == 8) {
-                image(coin, (42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
+                image(cesped, (42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
+                aro.position((42 * positionI) + 10, (42 * positionJ) + 90);
                 //fill(184, 200, 0);
                 //rect((42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
             } else {
@@ -310,8 +311,9 @@ function moverDerecha(matrizAUsar) {
             positionI += 1;
             console.log(1);
 
-            fill(247, 80, 80);
-            triangle((42 * positionI) + 10, (42 * positionJ) + 50, (42 * positionI) + 30, (42 * positionJ) + 10, (42 * positionI) + 50, (42 * positionJ) + 50);
+            //fill(247, 80, 80);
+            //triangle((42 * positionI) + 10, (42 * positionJ) + 50, (42 * positionI) + 30, (42 * positionJ) + 10, (42 * positionI) + 50, (42 * positionJ) + 50);
+            sonic.position((42 * positionI) + 10, (42 * positionJ) + 90);
         }
     } else {
         alert("Te saliste del mapa");
@@ -324,7 +326,8 @@ function moverIzquierda(matrizAUsar) {
         if (matrizAUsar[positionI - 1][positionJ] != 3) {
 
             if (positionI == 8 && positionJ == 8) {
-                image(coin, (42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
+                image(cesped, (42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
+                aro.position((42 * positionI) + 10, (42 * positionJ) + 90);
                 //fill(184, 200, 0);
                 //rect((42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
             } else {
@@ -335,8 +338,9 @@ function moverIzquierda(matrizAUsar) {
             positionI -= 1;
             console.log(1);
 
-            fill(247, 80, 80);
-            triangle((42 * positionI) + 10, (42 * positionJ) + 50, (42 * positionI) + 30, (42 * positionJ) + 10, (42 * positionI) + 50, (42 * positionJ) + 50);
+            //fill(247, 80, 80);
+            //triangle((42 * positionI) + 10, (42 * positionJ) + 50, (42 * positionI) + 30, (42 * positionJ) + 10, (42 * positionI) + 50, (42 * positionJ) + 50);
+            sonic.position((42 * positionI) + 10, (42 * positionJ) + 90);
         }
     } else {
         alert("Te saliste del mapa");
@@ -349,7 +353,8 @@ function moverArriba(matrizAUsar) {
         if (matrizAUsar[positionI][positionJ - 1] != 3) {
 
             if (positionI == 8 && positionJ == 8) {
-                image(coin, (42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
+                image(cesped, (42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
+                aro.position((42 * positionI) + 10, (42 * positionJ) + 90);
                 //fill(184, 200, 0);
                 //rect((42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
             } else {
@@ -360,8 +365,9 @@ function moverArriba(matrizAUsar) {
             positionJ -= 1;
             console.log(1);
 
-            fill(247, 80, 80);
-            triangle((42 * positionI) + 10, (42 * positionJ) + 50, (42 * positionI) + 30, (42 * positionJ) + 10, (42 * positionI) + 50, (42 * positionJ) + 50);
+            //fill(247, 80, 80);
+            //triangle((42 * positionI) + 10, (42 * positionJ) + 50, (42 * positionI) + 30, (42 * positionJ) + 10, (42 * positionI) + 50, (42 * positionJ) + 50);
+            sonic.position((42 * positionI) + 10, (42 * positionJ) + 90);
         }
     } else {
         alert("Te saliste del mapa");
@@ -374,7 +380,8 @@ function moverAbajo(matrizAUsar) {
         if (matrizAUsar[positionI][positionJ + 1] != 3) {
 
             if (positionI == 8 && positionJ == 8) {
-                image(coin, (42 * i) + 10, (42 * j) + 10, 40, 40);
+                image(cesped, (42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
+                aro.position((42 * positionI) + 10, (42 * positionJ) + 90);
                 //fill(184, 200, 0);
                 //rect((42 * positionI) + 10, (42 * positionJ) + 10, 40, 40);
             } else {
@@ -385,8 +392,9 @@ function moverAbajo(matrizAUsar) {
             positionJ += 1;
             console.log(1);
 
-            fill(247, 80, 80);
-            triangle((42 * positionI) + 10, (42 * positionJ) + 50, (42 * positionI) + 30, (42 * positionJ) + 10, (42 * positionI) + 50, (42 * positionJ) + 50);
+            //fill(247, 80, 80);
+            //triangle((42 * positionI) + 10, (42 * positionJ) + 50, (42 * positionI) + 30, (42 * positionJ) + 10, (42 * positionI) + 50, (42 * positionJ) + 50);
+            sonic.position((42 * positionI) + 10, (42 * positionJ) + 90);
         }
     } else {
         alert("Te saliste del mapa");
@@ -433,11 +441,13 @@ function reset() {
                     image(cesped, (42 * i) + 10, (42 * j) + 10, 40, 40);
                     //fill(81, 187, 234);
                     //rect((42 * i) + 10, (42 * j) + 10, 40, 40);
-                    fill(247, 80, 80);
-                    triangle((42 * i) + 10, (42 * j) + 50, (42 * i) + 30, (42 * j) + 10, (42 * i) + 50, (42 * j) + 50);
+                    //fill(247, 80, 80);
+                    //triangle((42 * i) + 10, (42 * j) + 50, (42 * i) + 30, (42 * j) + 10, (42 * i) + 50, (42 * j) + 50);
+                    sonic.position((42 * i) + 10, (42 * j) + 90);
                 } else {
                     if (matrizAUsar[i][j] == 2) {
-                        image(coin, (42 * i) + 10, (42 * j) + 10, 40, 40);
+                        image(cesped, (42 * i) + 10, (42 * j) + 10, 40, 40);
+                        aro.position((42 * i) + 10, (42 * j) + 90);
                         //fill(184, 200, 0);
                         //rect((42 * i) + 10, (42 * j) + 10, 40, 40);
                     } else {
@@ -454,12 +464,19 @@ function reset() {
 var cesped;
 var coin;
 var pared;
+var sonic;
+var aro;
 
 function preload() {
 
     cesped = loadImage("assets/cesped.png");
     coin = loadImage("assets/coin.jpg");
     pared = loadImage("assets/pared.png");
+    sonic = createImg("assets/sonic.gif");
+    aro = createImg("assets/aro.gif");
+    sonic.size(40, 40);
+    aro.size(40, 40);
+
 }
 
 function setup() {
@@ -485,11 +502,13 @@ function setup() {
                     image(cesped, (42 * i) + 10, (42 * j) + 10, 40, 40);
                     //fill(81, 187, 234);
                     //rect((42 * i) + 10, (42 * j) + 10, 40, 40);
-                    fill(247, 80, 80);
-                    triangle((42 * i) + 10, (42 * j) + 50, (42 * i) + 30, (42 * j) + 10, (42 * i) + 50, (42 * j) + 50);
+                    //fill(247, 80, 80);
+                    //triangle((42 * i) + 10, (42 * j) + 50, (42 * i) + 30, (42 * j) + 10, (42 * i) + 50, (42 * j) + 50);
+                    sonic.position((42 * i) + 10, (42 * j) + 90);
                 } else {
                     if (matriz1[i][j] == 2) {
-                        image(coin, (42 * i) + 10, (42 * j) + 10, 40, 40);
+                        image(cesped, (42 * i) + 10, (42 * j) + 10, 40, 40);
+                        aro.position((42 * i) + 10, (42 * j) + 90);
                         //fill(184, 200, 0);
                         //rect((42 * i) + 10, (42 * j) + 10, 40, 40);
                     } else {
